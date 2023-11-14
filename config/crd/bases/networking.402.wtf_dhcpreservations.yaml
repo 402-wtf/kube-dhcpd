@@ -34,11 +34,23 @@ spec:
           spec:
             description: DHCPReservationSpec defines the desired state of DHCPReservation
             properties:
+              description:
+                description: Decription is a human-readable note about this entry
+                  (not parsed)
+                type: string
+              hostname:
+                description: Hostname is the client host without the domain part
+                type: string
               ipAddress:
                 description: IPAddress is the reserved IP address
                 type: string
+              macAddress:
+                description: MacAddress is the MAC address associated with this reservation
+                type: string
             required:
+            - hostname
             - ipAddress
+            - macAddress
             type: object
           status:
             description: DHCPReservationStatus defines the observed state of DHCPReservation

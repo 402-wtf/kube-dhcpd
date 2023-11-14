@@ -25,20 +25,20 @@ import (
 
 // DHCPReservationSpec defines the desired state of DHCPReservation
 type DHCPReservationSpec struct {
-  // INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-  // Important: Run "make" to regenerate code after modifying this file
+	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
+	// Important: Run "make" to regenerate code after modifying this file
 
-  // IPAddress is the reserved IP address
-  IPAddress string `json:"ipAddress"`
+	// IPAddress is the reserved IP address
+	IPAddress string `json:"ipAddress"`
 
-  // MacAddress is the MAC address associated with this reservation
-  MACAddress string `json:"macAddress"`
+	// MacAddress is the MAC address associated with this reservation
+	MACAddress string `json:"macAddress"`
 
-  // Hostname is the client host without the domain part
-  Hostname string `json:"hostname"`
+	// Hostname is the client host without the domain part
+	Hostname string `json:"hostname"`
 
-  // Decription is a human-readable note about this entry (not parsed)
-  Description string `json:description,omitempty"`
+	// Decription is a human-readable note about this entry (not parsed)
+	Description string `json:"description,omitempty"`
 }
 
 // DHCPReservationStatus defines the observed state of DHCPReservation

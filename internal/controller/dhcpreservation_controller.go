@@ -47,21 +47,21 @@ type DHCPReservationReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.16.0/pkg/reconcile
 func (r *DHCPReservationReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = log.FromContext(ctx)
+	_log := log.FromContext(ctx)
 
 	// TODO(user): your logic here
- 
-  // Get the DHCPReservation object
-  dhcpReservation := &networkingv1alpha1.DHCPReservation{}
-  if err := r.Get(r.ctx, req.NamespacedName, dhcpReservation); err != nil {
-        // Error fetching the DHCPReservation, requeue the request
-        return ctrl.Result{}, client.IgnoreNotFound(err)
-  }
 
-  // Logging whenever we have a reconciliation event
-  _.Info("DHCPReservation updated", "Name", dhcpReservation.Name)
+	// Get the DHCPReservation object
+	dhcpReservation := &networkingv1alpha1.DHCPReservation{}
+	if err := r.Get(ctx, req.NamespacedName, dhcpReservation); err != nil {
+		// Error fetching the DHCPReservation, requeue the request
+		return ctrl.Result{}, client.IgnoreNotFound(err)
+	}
 
-  // TODO: Something probably needs to happen here when we communicate with the DHCP server
+	// Logging whenever we have a reconciliation event
+	_log.Info("DHCPReservation updated", "Name", dhcpReservation.Name)
+
+	// TODO: Something probably needs to happen here when we communicate with the DHCP server
 
 	return ctrl.Result{}, nil
 }
