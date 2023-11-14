@@ -1,0 +1,31 @@
+# permissions for end users to edit dhcpreservations.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: dhcpreservation-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kube-dhcpd
+    app.kubernetes.io/part-of: kube-dhcpd
+    app.kubernetes.io/managed-by: kustomize
+  name: dhcpreservation-editor-role
+rules:
+- apiGroups:
+  - networking.dhcp.402.wtf
+  resources:
+  - dhcpreservations
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - networking.dhcp.402.wtf
+  resources:
+  - dhcpreservations/status
+  verbs:
+  - get

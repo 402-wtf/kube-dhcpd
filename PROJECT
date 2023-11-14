@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: kube-dhcpd
 repo: github.com/402-wtf/kube-dhcpd.git
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dhcp.402.wtf
+  group: networking
+  kind: DHCPReservation
+  path: github.com/402-wtf/kube-dhcpd.git/api/v1alpha1
+  version: v1alpha1
 version: "3"
