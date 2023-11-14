@@ -30,6 +30,15 @@ type DHCPReservationSpec struct {
 
 	// IPAddress is the reserved IP address
 	IPAddress string `json:"ipAddress"`
+
+  // MacAddress is the MAC address associated with this reservation
+  MACAddress string `json:"macAddress"`
+
+  // Hostname is the client host without the domain part
+  Hostname string `json:"hostname"`
+
+  // Decription is a human-readable note about this entry (not parsed)
+  Description string `json:description,omitempty"`
 }
 
 // DHCPReservationStatus defines the observed state of DHCPReservation
