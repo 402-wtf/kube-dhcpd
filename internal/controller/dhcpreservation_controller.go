@@ -50,6 +50,18 @@ func (r *DHCPReservationReconciler) Reconcile(ctx context.Context, req ctrl.Requ
 	_ = log.FromContext(ctx)
 
 	// TODO(user): your logic here
+ 
+  // Get the DHCPReservation object
+  dhcpReservation := &networkingv1alpha1.DHCPReservation{}
+  if err := r.Get(r.ctx, req.NamespacedName, dhcpReservation); err != nil {
+        // Error fetching the DHCPReservation, requeue the request
+        return ctrl.Result{}, client.IgnoreNotFound(err)
+  }
+
+  // Logging whenever we have a reconciliation event
+  _.Info("DHCPReservation updated", "Name", dhcpReservation.Name)
+
+  // TODO: Something probably needs to happen here when we communicate with the DHCP server
 
 	return ctrl.Result{}, nil
 }
