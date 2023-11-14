@@ -1,4 +1,4 @@
-apiVersion: networking.dhcp.402.wtf/v1alpha1
+apiVersion: networking.402.wtf/v1alpha1
 kind: DHCPReservation
 metadata:
   labels:

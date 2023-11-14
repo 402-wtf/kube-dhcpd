@@ -4,9 +4,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.13.0
-  name: dhcpreservations.networking.dhcp.402.wtf
+  name: dhcpreservations.networking.402.wtf
 spec:
-  group: networking.dhcp.402.wtf
+  group: networking.402.wtf
   names:
     kind: DHCPReservation
     listKind: DHCPReservationList

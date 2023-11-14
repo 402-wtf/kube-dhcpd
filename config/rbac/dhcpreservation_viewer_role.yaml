@@ -12,7 +12,7 @@ metadata:
   name: dhcpreservation-viewer-role
 rules:
 - apiGroups:
-  - networking.dhcp.402.wtf
+  - networking.402.wtf
   resources:
   - dhcpreservations
   verbs:
@@ -20,7 +20,7 @@ rules:
   - list
   - watch
 - apiGroups:
-  - networking.dhcp.402.wtf
+  - networking.402.wtf
   resources:
   - dhcpreservations/status
   verbs:

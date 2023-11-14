@@ -2,7 +2,7 @@
 # This file is used to track the info used to scaffold your project
 # and allow the plugins properly work.
 # More info: https://book.kubebuilder.io/reference/project-config.html
-domain: dhcp.402.wtf
+domain: 402.wtf
 layout:
 - go.kubebuilder.io/v4
 projectName: kube-dhcpd
@@ -12,7 +12,7 @@ resources:
     crdVersion: v1
     namespaced: true
   controller: true
-  domain: dhcp.402.wtf
+  domain: 402.wtf
   group: networking
   kind: DHCPReservation
   path: github.com/402-wtf/kube-dhcpd.git/api/v1alpha1

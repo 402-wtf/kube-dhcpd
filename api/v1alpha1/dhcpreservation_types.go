@@ -25,11 +25,11 @@ import (
 
 // DHCPReservationSpec defines the desired state of DHCPReservation
 type DHCPReservationSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+  // INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
+  // Important: Run "make" to regenerate code after modifying this file
 
-	// IPAddress is the reserved IP address
-	IPAddress string `json:"ipAddress"`
+  // IPAddress is the reserved IP address
+  IPAddress string `json:"ipAddress"`
 
   // MacAddress is the MAC address associated with this reservation
   MACAddress string `json:"macAddress"`

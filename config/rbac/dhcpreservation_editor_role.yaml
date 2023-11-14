@@ -12,7 +12,7 @@ metadata:
   name: dhcpreservation-editor-role
 rules:
 - apiGroups:
-  - networking.dhcp.402.wtf
+  - networking.402.wtf
   resources:
   - dhcpreservations
   verbs:
@@ -24,7 +24,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - networking.dhcp.402.wtf
+  - networking.402.wtf
   resources:
   - dhcpreservations/status
   verbs:
