@@ -19,3 +19,23 @@
 
 # Go workspace file
 go.work
+
+.idea/
+.vscode/
+WORKSPACE
+
+# Editor temp files
+*~
+\#*#
+*.swp
+
+# Skip bazel dirs
+/bazel-*
+
+# skip bin dirs
+**/bin
+**/testbin
+
+# skip .out files (coverage tests)
+*.out
+
